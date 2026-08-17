@@ -1,0 +1,84 @@
+/* ============================================================
+   RESPONSIVE — breakpoints
+   ============================================================ */
+
+/* ---------- Tablet (≤ 960px) ---------- */
+@media (max-width: 960px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+  .hero__subtitle { margin-inline: auto; }
+  .hero__actions { justify-content: center; }
+  .hero__media { order: -1; justify-content: center; }
+  .hero__img { max-width: 520px; }
+
+  .benefits__inner { grid-template-columns: 1fr; }
+
+  .tool-card { grid-template-columns: 1fr; }
+  .tool-card__media { max-width: 320px; margin-inline: auto; }
+
+  .testimonial { flex: 0 0 calc((100% - 24px) / 2); } /* 2 por vista */
+
+  .cta__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-block: clamp(3rem, 6vw, 5rem) 0;
+  }
+  .cta__content { align-self: auto; padding-bottom: clamp(2.5rem, 6vw, 4rem); }
+  .cta__media { order: -1; margin-inline: auto; align-items: flex-end; }
+  .cta__actions { justify-content: center; }
+}
+
+/* ---------- Móvil (≤ 720px) ---------- */
+@media (max-width: 720px) {
+  /* Nav colapsable */
+  .nav-toggle { display: flex; }
+  .site-nav {
+    position: absolute;
+    top: 88px;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: var(--shadow-md);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition);
+  }
+  .site-nav.is-open { max-height: 320px; }
+  .nav-list { flex-direction: column; gap: 0; padding: 8px var(--gutter) 16px; }
+  .nav-btn {
+    display: block;
+    background: transparent;
+    color: var(--color-ink);
+    border-radius: var(--radius-sm);
+    padding: 14px 12px;
+  }
+  .nav-btn:hover { background: var(--color-surface-alt); }
+
+  .nav-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-toggle.is-open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  .pricing { grid-template-columns: 1fr; }
+
+  .section__header { flex-direction: column; }
+
+  .testimonial { flex: 0 0 100%; } /* 1 por vista en móvil */
+
+  .footer__inner { flex-direction: column; }
+  .footer__bottom-inner { flex-direction: column; align-items: flex-start; }
+
+  .btn { width: 100%; }
+  .hero__actions .btn,
+  .cta__actions .btn { flex: 1 1 auto; }
+}
+
+/* ---------- Móvil pequeño (≤ 420px) ---------- */
+@media (max-width: 420px) {
+  .plan-card, .testimonial, .tool-card, .benefit { padding: 24px; }
+  .plan-card__price { font-size: 2.75rem; }
+}

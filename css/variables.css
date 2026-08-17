@@ -1,0 +1,57 @@
+/* ============================================================
+   VARIABLES / DESIGN TOKENS
+   Extraídos del diseño de Figma (Landing/Desktop)
+   ============================================================ */
+:root {
+  /* --- Colores de marca --- */
+  --color-primary: #5468ff;          /* Botones principales */
+  --color-primary-hover: #4353e0;
+  --color-primary-active: #3a49d0;
+
+  /* Hero / banners azules (degradado según Figma) */
+  --color-hero-1: #2b3d99;
+  --color-hero-2: #4766ff;
+
+  /* --- Neutrales --- */
+  --color-ink: #1e1e1e;              /* Títulos / texto fuerte */
+  --color-text: #33373d;            /* Texto base */
+  --color-muted: #6b7280;           /* Texto secundario */
+  --color-muted-soft: #9ca0a8;      /* Etiquetas suaves */
+  --color-bg: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f4f4f5;     /* Secciones grises */
+  --color-border: #e6e6ea;
+  --color-white: #ffffff;
+
+  /* --- Tipografía --- */
+  --font-base: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  --fs-display: clamp(2.25rem, 5vw, 2.813rem);  /* 45px hero */
+  --fs-h2: clamp(1.75rem, 3.5vw, 2.25rem);
+  --fs-h3: 1.25rem;
+  --fs-lead: 1.125rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  --lh-tight: 1.15;
+  --lh-base: 1.55;
+
+  /* --- Espaciado / layout --- */
+  --container: 1120px;
+  --gutter: 24px;
+  --section-y: clamp(3rem, 7vw, 5.5rem);
+
+  /* --- Formas --- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+
+  /* --- Sombras --- */
+  --shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.06);
+  --shadow-md: 0 8px 24px rgba(16, 24, 40, 0.08);
+  --shadow-lg: 0 18px 48px rgba(16, 24, 40, 0.12);
+
+  /* --- Transiciones --- */
+  --transition: 0.2s ease;
+}

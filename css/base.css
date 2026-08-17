@@ -1,0 +1,125 @@
+/* ============================================================
+   BASE — tipografía global, contenedor y utilidades
+   ============================================================ */
+body {
+  font-family: var(--font-base);
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow-x: hidden; /* evita scroll horizontal por elementos full-bleed (100vw) */
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.section { padding-block: var(--section-y); }
+
+/* Destino del autoscroll de la topbar: deja aire al llegar */
+#planes, #beneficios, #herramientas { scroll-margin-top: 24px; }
+
+/* Encabezados de sección */
+.section__title {
+  font-size: var(--fs-h2);
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.section__lead {
+  margin-top: 12px;
+  font-size: var(--fs-lead);
+  color: var(--color-muted);
+  max-width: 720px;
+}
+
+.section__title--center,
+.section__lead--center {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.link-strong { color: var(--color-primary); font-weight: 600; white-space: nowrap; }
+
+/* ---------------- Botones ---------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 26px;
+  font-size: var(--fs-body);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  transition: background var(--transition), color var(--transition),
+              border-color var(--transition), transform var(--transition);
+  white-space: nowrap;
+}
+.btn:active { transform: translateY(1px); }
+
+.btn--primary { background: var(--color-primary); color: #fff; }
+.btn--primary:hover { background: var(--color-primary-hover); }
+
+.btn--light { background: #fff; color: var(--color-ink); }
+.btn--light:hover { background: #eef0ff; }
+
+/* Botón sin borde, texto claro (sobre fondo azul) */
+.btn--plain-light { background: transparent; color: #fff; border-color: transparent; }
+.btn--plain-light:hover { background: rgba(255, 255, 255, 0.14); }
+
+/* Botón sin borde, texto azul (sobre fondo claro) */
+.btn--plain { background: transparent; color: var(--color-primary); border-color: transparent; }
+.btn--plain:hover { background: #eef0ff; }
+
+.btn--block { width: 100%; }
+
+/* ---------------- Marca ---------------- */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.brand__logo { height: 30px; width: auto; }
+
+/* ---------------- Enlaces de navegación (topbar) ---------------- */
+.nav-btn {
+  display: inline-block;
+  padding: 8px 16px;
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  border-radius: var(--radius-sm); /* 8px, esquinas redondeadas (no píldora) */
+  transition: background var(--transition), color var(--transition);
+}
+.nav-btn:hover,
+.nav-btn:focus-visible { background: rgba(255, 255, 255, 0.18); }
+
+/* ---------------- Carrusel (flechas) ---------------- */
+.carousel-nav { display: flex; gap: 12px; flex-shrink: 0; }
+.carousel-btn {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--color-ink);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: #fff;
+  transition: background var(--transition), border-color var(--transition);
+}
+.carousel-btn:hover { background: var(--color-surface-alt); border-color: var(--color-muted-soft); }
+.carousel-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+.carousel-btn:disabled:hover { background: #fff; border-color: var(--color-border); }
