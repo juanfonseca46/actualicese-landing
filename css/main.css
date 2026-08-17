@@ -2,8 +2,8 @@
    MAIN — punto de entrada de estilos
    Importa los módulos en orden (cascada controlada)
    ============================================================ */
-@import "variables.css?v=9";
-@import "reset.css?v=9";
-@import "base.css?v=9";
-@import "components.css?v=9";
-@import "responsive.css?v=9";
+@import "variables.css?v=10";
+@import "reset.css?v=10";
+@import "base.css?v=10";
+@import "components.css?v=10";
+@import "responsive.css?v=10";
