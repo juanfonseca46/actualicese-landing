@@ -69,6 +69,12 @@
 
   .testimonial { flex: 0 0 100%; } /* 1 por vista en móvil */
 
+  /* En móvil: la imagen de "formatos" va primero, luego las cards */
+  .benefits__media { order: -1; }
+
+  /* En móvil: ocultar la imagen del cierre (CTA) */
+  .cta__media { display: none; }
+
   .footer__inner { flex-direction: column; }
   .footer__bottom-inner { flex-direction: column; align-items: flex-start; }
 
